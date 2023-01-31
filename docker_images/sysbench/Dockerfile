@@ -20,3 +20,4 @@ FROM debian:11-slim
 RUN apt-get update && apt-get install -y libpq-dev
 
 COPY --from=builder /usr/local/bin/sysbench /usr/local/bin/sysbench
+COPY --from=builder /usr/local/share/sysbench /usr/local/share/sysbench
