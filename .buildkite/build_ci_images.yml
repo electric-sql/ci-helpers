@@ -1,0 +1,13 @@
+agent:
+  docker: true
+  gcp: true
+
+steps:
+  - group: ":docker: Build CI docker images"
+    steps:
+      - label: "Electric builder"
+        command: cd docker_images && make electric_builder
+      - label: "Electric runner"
+        command: cd docker_images && make electric_runner
+      - label: "Sysbench"
+        command: cd docker_images && make sysbench
