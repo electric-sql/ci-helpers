@@ -11,5 +11,4 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -f /var/lib/apt/lists/*_*
 
-ENV MIX_ENV=prod
 RUN mix local.hex --force && mix local.rebar --force
