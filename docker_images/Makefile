@@ -7,7 +7,7 @@ export DEBIAN_VERSION ?= bullseye-20210902-slim
 export SYSBENCH_COMMIT ?= df89d34c410a2277e19f77e47e535d0890b2029b
 
 ifdef CI
-	build_command = buildx build --platform linux/arm64/v8,linux/amd6 --push
+	build_command = buildx build --platform linux/arm64/v8,linux/amd64 --push
 else
 	build_command = build
 endif
